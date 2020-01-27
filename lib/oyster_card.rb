@@ -3,7 +3,7 @@ class OysterCard
     attr_writer :state
 
     CARD_LIMIT = 90
-    MINIMUM_BALANCE = 1
+    MINIMUM_FARE = 1
 
     def initialize
         @balance = 0
@@ -15,21 +15,22 @@ class OysterCard
         @balance += amount
     end
 
-    def deduct(fare)
-        @balance -= fare
-    end
-
     def in_journey?
         @state
     end
 
     def touch_in
-        raise "Insufficient funds for travel - £1 minimum required" if @balance < MINIMUM_BALANCE
+        raise "Insufficient funds for travel - £1 minimum required" if @balance < MINIMUM_FARE
         @state = true
     end
 
     def touch_out
+        deduct(MINIMUM_FARE)
         @state = false
     end
 
+    private
+    def deduct(fare)
+        @balance -= fare
+    end
 end
