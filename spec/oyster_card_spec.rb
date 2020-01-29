@@ -4,6 +4,7 @@ describe OysterCard do
     subject(:oyster) { described_class.new }
     let(:entry_station) { double('bank') }
     let(:exit_station) { double('aldgate')}
+
     it 'initializes with a balance of 0' do
         expect(oyster.balance).to eq 0
     end
@@ -66,12 +67,13 @@ describe OysterCard do
         end
 
         it 'should forget the entry station once touched out' do
-            expect { oyster.touch_out(exit_station) }.to change{ oyster.entry_station }.to nil
+            oyster.touch_out(exit_station)
+            expect(oyster).not_to be_in_journey
         end
 
         it 'should store entry and exit stations in journeys' do
             oyster.touch_out(exit_station)
-            expect(oyster.journeys).to eq [{entry: "entry_station", exit: "exit_station"}]
+            expect(oyster.journeys).to eq [{entry: "#{entry_station}", exit: "#{exit_station}"}]
         end
     end
 end
