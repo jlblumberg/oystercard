@@ -18,10 +18,10 @@ class OysterCard
         !@entry_station.nil?
     end
 
-    def touch_in(station)
+    def touch_in(entry_station)
         raise "Insufficient funds for travel - £1 minimum required" if @balance < MINIMUM_FARE
-        @entry_station = station
-        @current_journey = {entry: "#{station}"}
+        @entry_station = entry_station
+        @current_journey = {entry: "#{entry_station}"}
     end
 
     def touch_out(exit_station)
