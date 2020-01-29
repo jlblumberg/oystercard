@@ -20,13 +20,13 @@ describe OysterCard do
 
     describe "#in_journey?" do
         it 'returns false if not tapped in' do
-            expect(oyster.in_journey?).to eq nil
+            expect(oyster.in_journey?).to eq false
         end
 
         it 'returns true if tapped in' do
             oyster.top_up(OysterCard::CARD_LIMIT)
             oyster.touch_in(station)
-            expect(oyster.in_journey?).to eq (station)
+            expect(oyster.in_journey?).to eq (true)
         end
     end
 
