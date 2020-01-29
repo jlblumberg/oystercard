@@ -1,5 +1,5 @@
 class OysterCard
-    attr_reader :balance
+    attr_reader :balance, :entry_station
     attr_writer :state
 
     CARD_LIMIT = 90
@@ -8,6 +8,7 @@ class OysterCard
     def initialize
         @balance = 0
         @state = false
+        @entry_station = nil
     end
 
     def top_up(amount)
