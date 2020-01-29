@@ -7,6 +7,10 @@ describe OysterCard do
         expect(oyster.balance).to eq 0
     end
 
+    it 'starts with an empty journey' do
+      expect(oyster.journeys).to eq([])
+    end
+
     describe "#top_up" do
     it 'adds money to balance' do
         expect { oyster.top_up(10) }.to change { oyster.balance }.by(10)
