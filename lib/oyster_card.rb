@@ -19,7 +19,7 @@ class OysterCard
         @state
     end
 
-    def touch_in
+    def touch_in(station)
         raise "Insufficient funds for travel - £1 minimum required" if @balance < MINIMUM_FARE
         @state = true
     end
