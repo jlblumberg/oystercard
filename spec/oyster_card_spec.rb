@@ -20,12 +20,13 @@ describe OysterCard do
 
     describe "#in_journey?" do
         it 'returns false if not tapped in' do
-            expect(oyster.in_journey?).to eq false
+            expect(oyster.in_journey?).to eq nil
         end
 
         it 'returns true if tapped in' do
-            oyster.state = true
-            expect(oyster.in_journey?).to eq true
+            oyster.top_up(OysterCard::CARD_LIMIT)
+            oyster.touch_in(station)
+            expect(oyster.in_journey?).to eq (station)
         end
     end
 
@@ -46,16 +47,16 @@ describe OysterCard do
     end
 
     describe "#touch_out" do
-        it 'should change state to false' do
+        before (:each) do
             oyster.top_up(OysterCard::MINIMUM_FARE)
             oyster.touch_in(station)
+        end
+        it 'should change state to false' do
             oyster.touch_out
             expect(oyster).not_to be_in_journey
         end
 
         it 'should deduct the minimum fare from the balance' do
-            oyster.top_up(OysterCard::MINIMUM_FARE)
-            oyster.touch_in(station)
             expect { oyster.touch_out }.to change{ oyster.balance }.by(-OysterCard::MINIMUM_FARE)
         end
 
