@@ -1,11 +1,16 @@
 require 'stations'
 describe Stations do
-    subject(:station) { described_class.new }
-    it 'has an instance variable for name' do
-        expect(station.name).to eq "name"
-    end
 
-    it 'has an instance variable for zone' do
-        expect(station.zone).to eq "zone"
-    end
+  subject(:station) { described_class.new }
+
+  it 'station name' do
+    station = Stations.new("Stratford", 1)
+    expect(station.name).to eq("Stratford")
+  end
+
+  it 'station zone' do
+    station = Stations.new("Stratford", 1)
+    expect(station.zone).to eq(1)
+  end
+
 end
