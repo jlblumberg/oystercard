@@ -8,7 +8,7 @@ class OysterCard
     def initialize
         @balance = 0
         @state = false
-        @entry_station = nil
+        @entry_station = ""
     end
 
     def top_up(amount)
@@ -28,6 +28,7 @@ class OysterCard
     def touch_out
         deduct(MINIMUM_FARE)
         @state = false
+        @entry_station = nil
     end
 
     private
