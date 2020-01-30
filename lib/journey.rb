@@ -16,6 +16,7 @@ class Journey
 
   def exit(exit_station = nil)
     @exit_station = exit_station
+    @complete = true
     self
   end
 

@@ -30,6 +30,11 @@ describe Journey do
         journey.exit
         expect(journey.fare).to eq(Journey::PENALTY_FARE)
       end
+
+      it "completes journey if someone exits without giving station" do
+        journey.exit
+        expect(journey.complete?).to eq(true)
+      end
     end
 
   end 
