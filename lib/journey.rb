@@ -14,7 +14,8 @@ class Journey
   def start
   end
 
-  def exit(station)
+  def exit(exit_station = nil)
+    @exit_station = exit_station
     self
   end
 

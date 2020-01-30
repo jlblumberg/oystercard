@@ -18,6 +18,19 @@ describe Journey do
     it 'has a penalty fare by default' do
       expect(journey.fare).to eq Journey::PENALTY_FARE
     end
-    
+
+    it "returns itself when exiting a journey" do
+      expect(journey.exit(station)).to eq(journey)
+    end
+
+    context "given an entry station" do
+      # maybe another subject statement?
+
+      it "returns a penalty fare if not given an exit station" do
+        journey.exit
+        expect(journey.fare).to eq(Journey::PENALTY_FARE)
+      end
+    end
+
   end 
 end
