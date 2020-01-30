@@ -35,7 +35,16 @@ describe Journey do
         journey.exit
         expect(journey.complete?).to eq(true)
       end
-    end
 
-  end 
-end
+      context "given an exit station" do
+        before do
+          journey.exit(other_station)
+        end
+
+        it "knows if a journey is complete" do
+          expect(journey.complete?).to eq(true)
+        end
+      end # end context
+    end # end context
+  end # end describe
+end # end describe
