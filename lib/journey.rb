@@ -11,6 +11,13 @@ class Journey
     @complete = false
   end
 
+  def start
+  end
+
+  def exit(station)
+    self
+  end
+
   def fare
     PENALTY_FARE
   end
