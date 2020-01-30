@@ -44,6 +44,11 @@ describe Journey do
         it "knows if a journey is complete" do
           expect(journey.complete?).to eq(true)
         end
+
+        it "calculates a fare" do
+          expect(journey.fare).to eq(OysterCard::MINIMUM_FARE)
+        end
+
       end # end context
     end # end context
   end # end describe
