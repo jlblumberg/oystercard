@@ -4,7 +4,7 @@
 Oystercard Ruby Challenge
 -
 
-[Outline](#Outline) | [Task](#Task) | [Goals](#Goals) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work) |
+[Outline](#Outline) | [Task](#Task) | [Goals](#Goals) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work)
 
 ## <a name="Outline">Outline</a>
 
@@ -29,6 +29,12 @@ Tested software is easier to change because you can tell when it's broken just b
 Most code in the world is structured in small pieces called objects. This is done because it is easier to change than having everything in one place.
 
 ## <a name="Installation">Installation Instructions</a>
+
+1. Clone the repo to your local machine
+2. Run the command `gem install bundle` (if you don't have bundle already)
+3. When the installation completes, run `bundle`
+4. Run the programme in Ruby or via command line by requiring the airplane.rb in the lib directory
+5. Tests can be run using Rspec
 
 ## <a name="Story">User Stories</a>
 
