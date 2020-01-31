@@ -1,7 +1,7 @@
 
 ### [Makers Academy](http://www.makersacademy.com) - Week 2 Pair Programming Project
 
-Oystercard Ruby Challenge (test)
+Oystercard Ruby Challenge
 -
 
 [Outline](#Outline) | [Task](#Task) | [Goals](#Goals) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work)
