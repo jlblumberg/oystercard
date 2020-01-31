@@ -11,10 +11,12 @@ class Journey
     @complete = false
   end
 
-  def start
+  def start(entry_station)
+    @entry_station = entry_station
   end
 
   def exit(exit_station = nil)
+    @fare = OysterCard::MINIMUM_FARE if !full_journey[:a].nil?
     @exit_station = exit_station
     @complete = true
     self
@@ -29,9 +31,8 @@ class Journey
     @complete
   end
 
-# starting a journey, 
-# finishing a journey, (touch_out)
-# calculating the fare of a journey, (#fare)
-# returning whether or not the journey is complete. (#entry, exit and error)
+  def full_journey
+    { :entry_station => @entry_station, :exit_station => @exit_station }
+  end
 
 end

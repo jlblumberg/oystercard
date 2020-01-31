@@ -24,7 +24,6 @@ describe Journey do
     end
 
     context "given an entry station" do
-      # maybe another subject statement?
 
       it "returns a penalty fare if not given an exit station" do
         journey.exit
@@ -49,7 +48,7 @@ describe Journey do
           expect(journey.fare).to eq(OysterCard::MINIMUM_FARE)
         end
 
-      end # end context
-    end # end context
-  end # end describe
-end # end describe
+      end 
+    end 
+  end 
+end 

@@ -40,7 +40,7 @@ describe OysterCard do
         it 'should change state to true' do
             oyster.top_up(OysterCard::MINIMUM_FARE)
             oyster.touch_in(entry_station)
-            expect(oyster).to be_in_journey
+            expect(oyster.in_journey?).to eq(true)
         end
 
         it 'should raise an error if card does not hold the minimum balance' do
@@ -73,7 +73,7 @@ describe OysterCard do
 
         it 'should store entry and exit stations in journeys' do
             oyster.touch_out(exit_station)
-            expect(oyster.journeys).to eq [{entry: "#{entry_station}", exit: "#{exit_station}"}]
+            expect(oyster.journeys).to eq [{entry_station: entry_station, exit_station: exit_station}]
         end
     end
 end
