@@ -1,40 +1,26 @@
 
-### [Makers Academy](http://www.makersacademy.com) - Week 2 Pair Programming Project
+### [Makers Academy](http://www.makersacademy.com) - Week 2 Project
 
 Oystercard Ruby Challenge
 -
 
-[Outline](#Outline) | [Task](#Task) | [Goals](#Goals) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work)
+[Outline](#Outline) | [Task](#Task) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work)
 
 ## <a name="Outline">Outline</a>
 
-Build London's Oystercard system in Ruby!
+Build London's Oystercard system in Ruby.
 
 ## <a name="Task">The Task</a>
 
-This challenge starts with going over the foundational skills from last week's Boris Bikes, and then introduce some additinal complexities with the Oystercard system.
-
-## <a name="Goals">Goals</a>
-
-### I write code that is easy to change
-
-Writing easy to change software is highly prized amongst developers and employers. By developers because most of a developer's time is spent changing software. By employers because their teams can deliver value to customers faster.
-
-### I can test-drive my code
-
-Tested software is easier to change because you can tell when it's broken just by running a command, even the tricky edge cases.
-
-### I can build with objects
-
-Most code in the world is structured in small pieces called objects. This is done because it is easier to change than having everything in one place.
+This challenge starts with going over the foundational skills from last week's Boris Bikes, and then introduces some additinal complexities with the Oystercard system.
 
 ## <a name="Installation">Installation Instructions</a>
 
 1. Clone the repo to your local machine
-2. Run the command `gem install bundle` (if you don't have bundle already)
+2. Run the command `gem install bundle` (if you don't have bundler already)
 3. When the installation completes, run `bundle`
-4. Run the programme in Ruby or via command line by requiring the airplane.rb in the lib directory
-5. Tests can be run using Rspec
+4. Run the program via IRB
+5. Tests can be run using RSpec. Run the command `RSpec`.
 
 ## <a name="Story">User Stories</a>
 
@@ -88,7 +74,7 @@ As a customer
 I need to have the correct fare calculated
 ```
 
-<a name="Methods">Objects & Methods</a>
+## <a name="Methods">Objects & Methods</a>
 
 ### OysterCard
 
@@ -109,4 +95,4 @@ I need to have the correct fare calculated
 
 ## <a name="Future Work">Future Work</a>
 
-Unfortunately I did not get to complete this challenge. Next up was using the Extract Class methodology to create a JourneyLog class from Journey, and use it to un-couple some of the more coupled features of the program. 
+On a revisit of the project, in order to reduce coupling in the code, I would extract a JourneyLog class from Journey.
