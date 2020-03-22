@@ -4,7 +4,7 @@
 Oystercard Ruby Challenge
 -
 
-[Outline](#Outline) | [Task](#Task) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future work](#Future_Work)
+[Outline](#Outline) | [Task](#Task) | [Installation Instructions](#Installation) | [User Stories](#Story) | [Objects & Methods](#Methods) | [Future Work](#Future_Work)
 
 ## <a name="Outline">Outline</a>
 
@@ -93,6 +93,6 @@ I need to have the correct fare calculated
 | .exit(station) | Sets the station as the @exit_station attribute of the journey instance & sets in_journey? to false.
 | .fare | Calulates the fare based on the minimum fare and if a penalty has been issued for a previous journey |
 
-## <a name="Future Work">Future Work</a>
+## <a name="Future_Work">Future Work</a>
 
 On a revisit of the project, in order to reduce coupling in the code, I would extract a JourneyLog class from Journey.
